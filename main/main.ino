@@ -35,10 +35,9 @@ Adafruit_BME280 bme;
 unsigned long targetTime = 0;
 
 void clearDisp(int color){
-  /*for(int i = 0; i < 160; i++){
+  for(int i = 0; i < 160; i++){
     tft.drawFastVLine(i,0, tft.height(), color);
-  }*/
-  tft.drawRect(0,0,tft.width(),tft.height(),color);
+  }
 }
 
 void setup(){
