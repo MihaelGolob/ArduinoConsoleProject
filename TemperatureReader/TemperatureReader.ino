@@ -57,7 +57,7 @@ void setup(){
   Serial.begin(9200);
 
   // BME280:
-  unsigned status = bme.begin();
+  unsigned status = bme.begin(0x76);
   if (!status)
     Serial.println("Sensor not connected correctly");
 }
