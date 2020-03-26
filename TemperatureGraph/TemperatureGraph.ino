@@ -40,7 +40,7 @@ void clearDisp(int color){
   }
 }
 
-int coorX, coorY;
+float coorX, coorY;
 int squareW;
 
 void setup(){
@@ -94,10 +94,11 @@ void printTemp(){
 }
 
 void printGraph() {
-  int temp = bme.readTemperature();
-  coorY = map(temp, 20, 35, 128, 15);
+  float temp = bme.readTemperature();
+  coorY = -7.53333 * temp + 263.666667;
+  Serial.println(coorY);
   
-  tft.drawPixel(coorX, coorY, BLUE);
+  tft.drawPixel(coorX, coorY, PINK);
   //tft.fillRect(coorX,coorY,squareW,squareW,BLUE);
 
   coorX += squareW;
