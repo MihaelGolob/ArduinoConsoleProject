@@ -43,7 +43,7 @@ void clearDisp(int color){
 void setup(){
   // basic display settings:
   tft.init();
-  tft.setRotation(1);
+  tft.setRotation(3);
   clearDisp(WHITE);
 
   // turn on display backlight:
